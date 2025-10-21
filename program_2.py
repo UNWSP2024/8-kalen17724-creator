@@ -20,4 +20,16 @@ sentence = "StopAndSmellTheRoses"
 
 new_sentence = word_separator(sentence)
 
-print(new_sentence)
+print(new_sentence)def word_seperator():
+    sentence = input("Enter a sentence where the first letter " \
+    "of each word is all uppercase, but there are no spaces: ")
+    result = ""
+    for i, character in enumerate(sentence):
+        if character.isupper() and i != 0:
+            result += " "
+        result += character 
+    result = result.capitalize()
+    return result 
+
+
+print(word_seperator())
